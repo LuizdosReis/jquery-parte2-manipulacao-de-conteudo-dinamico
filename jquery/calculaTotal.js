@@ -20,12 +20,12 @@ tiraDestaque = function(){
 
 escondePropagandas = function(event){
 	event.preventDefault();
-	$(".propaganda").hide();
+	$(".propaganda").fadeOut();
 }
 
 mostraPropagandas = function(event){
 	event.preventDefault();
-	$(".propaganda").show();
+	$(".propaganda").fadeIn();
 }
 
 $(function(){
