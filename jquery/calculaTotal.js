@@ -11,7 +11,7 @@ var umaPropaganda = function(){
 };
 
 daDestaque = function(){
-	$(this).css("background","#ccc");
+	$(this).addClass("hovering");
 };
 
 tiraDestaque = function(){
