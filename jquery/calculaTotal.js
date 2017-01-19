@@ -18,14 +18,10 @@ tiraDestaque = function(){
 	$(this).removeClass("hovering");
 };
 
-escondePropagandas = function(event){
+alteraPropagandas = function(event){
 	event.preventDefault();
-	$(".propaganda").fadeOut();
-}
-
-mostraPropagandas = function(event){
-	event.preventDefault();
-	$(".propaganda").fadeIn();
+	$(".propaganda").fadeToggle();
+	$(".alterna-propaganda").toggle();
 }
 
 $(function(){
@@ -36,8 +32,7 @@ $(function(){
 		});
 	});
 	$(".carrinho tbody tr").hover(daDestaque,tiraDestaque);
-	$("#esconde-propagandas").click(escondePropagandas);
-	$("#mostra-propagandas").click(mostraPropagandas);
+	$(".alterna-propaganda").click(alteraPropagandas);
 });
 
 

@@ -89,3 +89,7 @@ input[type=button] {
 	background:  #ccc;
 }
 
+#mostra-propagandas{ 
+    display:none;
+}
+
