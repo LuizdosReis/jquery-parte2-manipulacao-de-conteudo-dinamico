@@ -8,15 +8,24 @@ var umaPropaganda = function(){
     var tr = $("<tr>").addClass("propaganda").append($("<td>"));
     tr.find("td").attr("colspan",6).text(texto);
     return tr;	
-}
+};
+
+daDestaque = function(){
+	$(this).css("background","#ccc");
+};
+
+tiraDestaque = function(){
+	$(this).removeClass("hovering");
+};
 
 $(function(){
 	calculaTotal();
 	$(".carrinho").each(function(){
-		$(this).find("tr:nth-child(3n)").each(function(){
+		$(this).find("tr:nth-child(3n),tr:last").each(function(){
 			umaPropaganda().insertAfter($(this));
 		});
 	});
+	$(".carrinho tbody tr").hover(daDestaque,tiraDestaque);
 });
 
 
