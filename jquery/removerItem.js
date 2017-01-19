@@ -4,9 +4,10 @@ $(".remove-item").click(function(event){
 	calculaTotal();
 });
 
-$("#undo").click(function(){
-	$("tr:visible").removeClass("recuperado");
-	$("tr:hidden").show().addClass("recuperado");
+$(".undo").click(function(){
+	var carrinho = $(this).closest(".carrinho");
+	carrinho.find("tr:visible").removeClass("recuperado");
+	carrinho.find("tr:hidden").show().addClass("recuperado");
 	calculaTotal();
 });
 
