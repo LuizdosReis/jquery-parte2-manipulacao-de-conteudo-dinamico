@@ -11,10 +11,12 @@ var umaPropaganda = function(){
 };
 
 daDestaque = function(){
+	$(this).find(".remove-item").fadeIn()
 	$(this).addClass("hovering");
 };
 
 tiraDestaque = function(){
+	$(this).find(".remove-item").fadeOut();
 	$(this).removeClass("hovering");
 };
 
