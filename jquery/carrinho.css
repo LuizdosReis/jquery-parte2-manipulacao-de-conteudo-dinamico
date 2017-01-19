@@ -73,6 +73,9 @@ input[type=button] {
 
 	-webkit-appearance: none;
 }
+.recuperado{
+	background-color: #FE0;
+}
 
 .resumo {
 	background: #555;

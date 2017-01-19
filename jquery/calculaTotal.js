@@ -3,7 +3,7 @@ $(function(){
 });
 
 var calculaTotal = function(){
-	var itens = $(".valor-total-item");
+	var itens = $(".valor-total-item:visible");
 	var total = 0;
 	for(var i = 0; i < itens.length; i++) {
 		var conteudo = $(itens[i]).text();
