@@ -18,6 +18,16 @@ tiraDestaque = function(){
 	$(this).removeClass("hovering");
 };
 
+escondePropagandas = function(event){
+	event.preventDefault();
+	$(".propaganda").hide();
+}
+
+mostraPropagandas = function(event){
+	event.preventDefault();
+	$(".propaganda").show();
+}
+
 $(function(){
 	calculaTotal();
 	$(".carrinho").each(function(){
@@ -26,6 +36,8 @@ $(function(){
 		});
 	});
 	$(".carrinho tbody tr").hover(daDestaque,tiraDestaque);
+	$("#esconde-propagandas").click(escondePropagandas);
+	$("#mostra-propagandas").click(mostraPropagandas);
 });
 
 
